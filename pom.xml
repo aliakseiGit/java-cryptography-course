@@ -12,6 +12,7 @@
         <java.version>11</java.version>
         <junit.jupiter.version>5.1.1</junit.jupiter.version>
         <jaxb.api.version>2.4.0-b180830.0359</jaxb.api.version>
+        <jBCrypt.version>0.4.1</jBCrypt.version>
     </properties>
 
     <dependencies>
@@ -31,6 +32,11 @@
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
             <version>${jaxb.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.svenkubiak</groupId>
+            <artifactId>jBCrypt</artifactId>
+            <version>${jBCrypt.version}</version>
         </dependency>
     </dependencies>
 

@@ -27,4 +27,12 @@ class HashUtilsTest {
         byte[] hash2 = HashUtils.createSHA2Hash(valueToHash, salt);
         assertEquals(DatatypeConverter.printHexBinary(hash), DatatypeConverter.printHexBinary(hash2));
     }
+
+    @Test
+    void verifyHashedPasswordRoutine() {
+        String pass = "$$ome$^erComplEXp4$$word2#AS as an example of strong secret phrase";
+        final String hashedPassword = HashUtils.hashPassword(pass);
+        System.out.println(hashedPassword);
+        assertTrue(HashUtils.verifyPassword(pass, hashedPassword));
+    }
 }
