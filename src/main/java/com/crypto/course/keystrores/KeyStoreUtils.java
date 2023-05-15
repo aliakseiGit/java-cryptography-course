@@ -10,6 +10,7 @@ public class KeyStoreUtils {
 
     private static final String SECRET_KEY_KEYSTORE_TYPE = "JCEKS";
 
+    //save symmetric secretKey im KeyStore
     public static KeyStore createPrivateKeyJavaKeyStore(String keystorePassword, String keyAlias,
                                                         SecretKey secretKey, String secretKeyPassword) throws Exception {
         KeyStore keyStore = KeyStore.getInstance(SECRET_KEY_KEYSTORE_TYPE);
